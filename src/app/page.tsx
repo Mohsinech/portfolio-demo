@@ -79,7 +79,7 @@ export default function Home() {
                 <p className="eyebrow">Selected work</p>
                 <h2 className={styles.h2}>Things I&apos;ve built</h2>
               </div>
-              <p className={styles.sectionIntro}>Each one is live and on GitHub. Click through, try them, read the code.</p>
+              <p className={styles.sectionIntro}>The four projects of the program. Open the live ones, read the case studies and the code.</p>
             </div>
 
             {featured ? (
