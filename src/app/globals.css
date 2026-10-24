@@ -1,0 +1,276 @@
+/* One stylesheet, mobile first. Colors come from :root; the accent from src/content/site.ts. */
+
+:root {
+  --bg: #f6f5f1;
+  --card: #ffffff;
+  --ink: #121212;
+  --body: #4a4843;
+  --muted: #6b6860;
+  --line: #e2e0d8;
+  --dash: #c9c6bb;
+  --accent: #2f4bff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-text), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--ink);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: -0.03em;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Buttons */
+.btn,
+.btnOutline,
+.btnLight,
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btnOutline {
+  border: 1.5px solid var(--ink);
+}
+
+.btnOutline:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btnLight {
+  border: 1.5px solid #fff;
+  color: #fff;
+}
+
+.btnLight:hover {
+  background: #fff;
+  color: var(--ink);
+}
+
+.pill {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1.5px solid var(--ink);
+}
+
+.tag {
+  display: inline-flex;
+  padding: 6px 12px;
+  border: 1px solid #d6d3c9;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Screenshot or placeholder */
+.shot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px dashed var(--dash);
+  border-radius: 16px;
+  background: var(--card);
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  padding: 16px;
+}
+
+.shot:has(img) {
+  border: 1px solid var(--line);
+  padding: 0;
+}
+
+.shot img {
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Header */
+.header {
+  position: relative;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 16px;
+}
+
+.logo {
+  font-family: var(--font-display), sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.navLinks {
+  display: none;
+  flex-basis: 100%;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 8px;
+}
+
+.navLinks[data-open="true"] {
+  display: flex;
+}
+
+.navLink {
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footerInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  padding-block: 24px;
+}
+
+@media (min-width: 760px) {
+  .wrap {
+    padding-inline: 24px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  .navLinks,
+  .navLinks[data-open="true"] {
+    display: flex;
+    flex-basis: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+    padding-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+}
