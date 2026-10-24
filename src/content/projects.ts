@@ -44,8 +44,8 @@ export const projects: Project[] = [
     week: "Capstone · Weeks 6–8",
     tags: ["Next.js", "TypeScript", "Supabase", "Auth"],
     image: null,
-    liveUrl: null,
-    codeUrl: null,
+    liveUrl: "https://mawid-sooty.vercel.app/b/atlas-barbershop",
+    codeUrl: "https://github.com/Mohsinech/mawid",
     featured: true,
     caseStudy: {
       headline: "Mawid: online booking for small businesses",
