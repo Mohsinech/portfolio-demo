@@ -6,6 +6,7 @@ export const site = {
   name: "[Your Name]",
   /** Shown in the logo: yourname.dev */
   handle: "yourname",
+  /** An honest headline, e.g. "Junior web developer" or "Aspiring web developer". */
   role: "Junior web developer",
   city: "[Your city]",
   country: "Morocco",
@@ -20,10 +21,11 @@ export const site = {
     "[Two or three sentences in your own words: what you did before, why you started coding, what you love building now.]",
     "I learned web development at MilcodeUni, an 8-week live bootcamp taught in Darija and English.",
   ],
+  /** Only list what you can demonstrate in your projects. */
   skills: {
-    Frontend: ["HTML", "CSS", "JavaScript", "React", "Next.js"],
-    Backend: ["Supabase", "Postgres", "Auth", "REST APIs"],
-    Tools: ["Git", "GitHub", "Vercel", "VS Code", "Figma"],
+    Frontend: ["HTML", "CSS", "JavaScript", "React", "Next.js", "TypeScript"],
+    Backend: ["Supabase", "PostgreSQL", "Auth", "Row Level Security"],
+    Tools: ["Git", "GitHub", "Vercel", "VS Code"],
   } as Record<string, string[]>,
   email: "[your@email.com]",
   links: {

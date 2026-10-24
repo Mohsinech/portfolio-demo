@@ -2,6 +2,16 @@
 
 A personal developer portfolio built with Next.js. This is the reference version MilcodeUni students build and personalize.
 
+## What it covers (MilcodeUni final portfolio requirements)
+
+| Section | Where |
+|---|---|
+| Identity: name, honest headline, location, introduction | top of the home page |
+| Skills you can demonstrate | About |
+| At least three projects with screenshots, live links and repos | Selected work (Projects 1–3 + the capstone) |
+| Case study: problem, user, solution, responsibilities, decisions, challenges, outcome | `/projects/mawid` |
+| Contact: professional email, LinkedIn, GitHub | Let's build something |
+
 ## Make it yours
 
 1. Edit **`src/content/site.ts`**: your name, city, intro, about text, skills, email and links. Anything in `[brackets]` is a placeholder.

@@ -129,7 +129,7 @@ export default function Home() {
             ))}
           </div>
           <div className={styles.skills}>
-            {Object.entries(site.skills).map(([group, items]) => (
+            {(Object.entries(site.skills) as [string, string[]][]).map(([group, items]) => (
               <div key={group} className={styles.skillGroup}>
                 <h3 className={styles.skillTitle}>{group}</h3>
                 <div className="tags">

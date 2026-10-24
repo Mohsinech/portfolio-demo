@@ -84,9 +84,17 @@ export default async function ProjectPage({ params }: Props) {
             <p className={styles.body}>{study.problem}</p>
           </div>
           <div className={styles.stack}>
-            <h2 className={styles.h2}>What I built</h2>
+            <h2 className={styles.h2}>Who it&apos;s for</h2>
+            <p className={styles.body}>{study.user}</p>
+          </div>
+          <div className={styles.stack}>
+            <h2 className={styles.h2}>The solution</h2>
+            <p className={styles.body}>{study.solution}</p>
+          </div>
+          <div className={styles.stack}>
+            <h2 className={styles.h2}>What I did</h2>
             <ul className={styles.list}>
-              {study.built.map((item) => (
+              {study.responsibilities.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
@@ -110,8 +118,20 @@ export default async function ProjectPage({ params }: Props) {
 
         <section className={`wrap ${styles.columns}`}>
           <div className={styles.stack}>
-            <h2 className={styles.h2}>Hardest part</h2>
-            <p className={styles.body}>{study.hardest}</p>
+            <h2 className={styles.h2}>Key decisions</h2>
+            <ul className={styles.list}>
+              {study.decisions.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className={styles.stack}>
+            <h2 className={styles.h2}>Challenges</h2>
+            <p className={styles.body}>{study.challenges}</p>
+          </div>
+          <div className={styles.stack}>
+            <h2 className={styles.h2}>Outcome</h2>
+            <p className={styles.body}>{study.outcome}</p>
           </div>
           <div className={styles.stack}>
             <h2 className={styles.h2}>What I&apos;d add next</h2>
